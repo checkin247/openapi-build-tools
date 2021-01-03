@@ -1,0 +1,29 @@
+{
+  "name": "petstore-documentation-example",
+  "version": "1.0.0",
+  "description": "Bundled tools to buld and serve API specifications with petstore example",
+  "main": "./dist/index.html",
+  "dependencies": {
+    "redoc-cli": "^0.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "speccy lint reference/openapi.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/checkin247/openapi-build-tools.git"
+  },
+  "keywords": [
+    "openapi",
+    "documentation",
+    "build",
+    "lint"
+  ],
+  "author": "Thomas Liebrand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/checkin247/openapi-build-tools/issues"
+  },
+  "homepage": "https://github.com/checkin247/openapi-build-tools#readme"
+}
