@@ -8,7 +8,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "speccy lint reference/openapi.yml"
+    "test": "speccy lint reference/openapi.yml",
+	"build": "npx redoc-cli bundle petstore_api.json -o dist/index.html --disableGoogleFont=true --title=\"Petstore API specifications\"",
+	"lint": "speccy lint petstore_api.json",
+	"mock": "prism mock dist/petstore.yaml",
+	"resolve": "speccy resolve petstore_api.json -o dist/petstore.yaml",
+    "postman": "npx openapi2postmanv2 -s ./dist/openapi.yml -o ./dist/postman_collection.json"
+
   },
   "repository": {
     "type": "git",

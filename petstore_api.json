@@ -347,8 +347,8 @@
 				"tags": [
 					"pet"
 				],
-				"summary": "Updates a pet in the store with form data",
-				"description": "",
+				"summary": "Updates a pet in the store",
+				"description": "Updates a pet in the store with form data",
 				"operationId": "updatePetWithForm",
 				"parameters": [
 					{
@@ -379,6 +379,9 @@
 					}
 				],
 				"responses": {
+          "200": {
+            "description": "OK"
+          },
 					"405": {
 						"description": "Invalid input"
 					}
@@ -397,7 +400,7 @@
 					"pet"
 				],
 				"summary": "Deletes a pet",
-				"description": "",
+				"description": "Deletes a pet by petId",
 				"operationId": "deletePet",
 				"parameters": [
 					{
@@ -421,6 +424,9 @@
 					}
 				],
 				"responses": {
+          "204": {
+            "description": "No Content"
+          },
 					"400": {
 						"description": "Invalid pet value"
 					}
@@ -441,7 +447,7 @@
 					"pet"
 				],
 				"summary": "uploads an image",
-				"description": "",
+				"description": "Uploads and saves an new imagefor a pet",
 				"operationId": "uploadFile",
 				"parameters": [
 					{
@@ -635,6 +641,9 @@
 					}
 				],
 				"responses": {
+          "204": {
+            "description": "No content"
+          },
 					"400": {
 						"description": "Invalid ID supplied"
 					},
@@ -673,6 +682,9 @@
 					}
 				},
 				"responses": {
+          "200": {
+            "description": "OK"
+          },
 					"default": {
 						"description": "successful operation",
 						"content": {
@@ -738,8 +750,8 @@
 				"tags": [
 					"user"
 				],
-				"summary": "Logs user into the system",
-				"description": "",
+				"summary": "User login",
+				"description": "Logs user into the system",
 				"operationId": "loginUser",
 				"parameters": [
 					{
@@ -804,11 +816,14 @@
 				"tags": [
 					"user"
 				],
-				"summary": "Logs out current logged in user session",
-				"description": "",
+				"summary": "Log out",
+				"description": "Logs out current logged in user session",
 				"operationId": "logoutUser",
 				"parameters": [],
 				"responses": {
+          "200": {
+            "description": "OK"
+          },
 					"default": {
 						"description": "successful operation"
 					}
@@ -820,8 +835,8 @@
 				"tags": [
 					"user"
 				],
-				"summary": "Get user by user name",
-				"description": "",
+				"summary": "Gets a user",
+				"description": "Get user by user name",
 				"operationId": "getUserByName",
 				"parameters": [
 					{
@@ -897,6 +912,9 @@
 					}
 				},
 				"responses": {
+          "200": {
+            "description": "OK"
+          },
 					"default": {
 						"description": "successful operation"
 					}
@@ -921,6 +939,9 @@
 					}
 				],
 				"responses": {
+          "204": {
+            "description": "No Content"
+          },
 					"400": {
 						"description": "Invalid username supplied"
 					},
